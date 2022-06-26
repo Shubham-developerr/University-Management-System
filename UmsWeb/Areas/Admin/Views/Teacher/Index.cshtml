@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Teacher>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Instructors Sheet</h1>
+<a asp-area="Admin" asp-controller="Teacher" asp-action="Create" class="btn btn-primary">Create</a>
+<table class="table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>DOB</th>
+            <th>DOJ</th>
+            <th>Department</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var ins in Model)
+        {
+            <tr>
+                <td>@ins.Name</td>
+                <td>@ins.Address</td>
+                <td>@ins.Email</td>
+                <td>@ins.Phone</td>
+                <td>@ins.DOB</td>
+                <td>@ins.DOJ</td>
+                <td>@ins.Department.Name</td>
+                <td>@ins.Course.Name</td>
+                <td>
+                   <a asp-controller="Teacher" asp-action="Edit" asp-route-id="@ins.Id" class="btn btn-warning">Edit</a>
+                </td>
+                <td>
+                    <a asp-controller="Teacher" asp-action="Delete" asp-route-id="@ins.Id" class="btn btn-warning">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
