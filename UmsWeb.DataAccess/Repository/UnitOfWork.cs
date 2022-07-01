@@ -17,6 +17,7 @@ namespace UmsWeb.DataAccess.Repository
         public StudentRepository Students { get; private set; }
         public SubjectRepository Subjects { get; private set; }
         public TeacherRepository Teachers { get; private set; }
+        public UserRepository Users { get; private set; }
 
         public UnitOfWork(ApplicationDbContext unitOfWork)
         {
@@ -27,7 +28,8 @@ namespace UmsWeb.DataAccess.Repository
             Fees = new FeesRepository(_unitOfWork);
             Students = new StudentRepository(_unitOfWork);
             Subjects = new SubjectRepository(_unitOfWork);
-            Teachers = new TeacherRepository(_unitOfWork);
+            Users = new UserRepository(_unitOfWork);
+            
         }
         public void Save()
         {

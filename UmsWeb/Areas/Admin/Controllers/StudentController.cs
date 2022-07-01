@@ -17,7 +17,7 @@ namespace UmsWeb.Areas.Admin.Controllers
         [Area("Admin")]
         public IActionResult Index()
         {
-            var course = _unitOfWork.Students.GetAll(includeProperties:"Course,Department");
+            var course = _unitOfWork.Students.GetAll(includeProperties:"Course,Department,User");
             return View(course);
         }
         [Area("Admin")]
@@ -33,7 +33,7 @@ namespace UmsWeb.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(StudentVM obj)
-        {
+        { 
             if (ModelState.IsValid)
             {
                 _unitOfWork.Students.Add(obj.Student);
@@ -47,7 +47,7 @@ namespace UmsWeb.Areas.Admin.Controllers
         [Area("Admin")]
         public IActionResult Edit(int? id)
         {
-            var course = _unitOfWork.Students.GetFirstOrDefault(u=>u.Id==id,includeProperties:"Course,Department");
+            var course = _unitOfWork.Students.GetFirstOrDefault(u=>u.Id==id,includeProperties:"Course,Department,User");
             return View(course);
         }
         [Area("Admin")]
@@ -58,7 +58,7 @@ namespace UmsWeb.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var data = _unitOfWork.Students.GetFirstOrDefault(i => i.Id == obj.Id);
+                /*var data = _unitOfWork.Students.GetFirstOrDefault(i => i.Id == obj.Id);*/
                 _unitOfWork.Students.Update(obj);
                 _unitOfWork.Save();
                 TempData["Success"] = "Edited Successfully";
@@ -79,5 +79,14 @@ namespace UmsWeb.Areas.Admin.Controllers
             }
             return View(obj);
         }
+        [Area("Admin")]
+        #region API CALL
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var obj = _unitOfWork.Students.GetAll(includeProperties:"Course,Department,User");
+            return Json(new { data = obj });
+        }
+        #endregion
     }
 }

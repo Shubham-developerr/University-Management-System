@@ -1,19 +1,18 @@
-﻿@model IEnumerable<UmsWeb.Models.Fees>
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h1>Fees Structure</h1>
 <a asp-area="Admin" asp-controller="Fees" asp-action="Create" class="btn btn-primary">Create</a>
-<table class="table-bordered table-striped">
+<table id="tblData" class="table-bordered table-striped">
     <thead>
         <tr>
             <th>Course Name</th>
             <th>Fees Per Semester</th>
+            <th></th>
         </tr>
     </thead>
-    <tbody>
+    @*<tbody>
         @foreach(var obj in Model)
         {
             <tr>
@@ -27,7 +26,10 @@
                 </td>
             </tr>
         }
-    </tbody>
+    </tbody>*@
 </table>
+@section Scripts{
+    <script src="~/js/Fees.js"></script>
+}
 
 

@@ -573,3 +573,12 @@ E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\refs\System.Xml.XPath.XDocument.dl
 E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\refs\WindowsBase.dll
 E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\web.config
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Negotiate.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\System.IO.Pipelines.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+E:\C# Programs\UmsWeb\UmsWeb\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll

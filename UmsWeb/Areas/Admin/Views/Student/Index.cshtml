@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Student>
+﻿
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,9 +6,10 @@
 
 <h1>Student Details</h1>
 <a asp-area="Admin" asp-controller="Student" asp-action="Create" class="btn btn-primary">Create</a>
-<table class="table-bordered table-striped">
+<table id="tblData" class="table-bordered all table-striped">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Father Name</th>
             <th>Mother Name</th>
@@ -20,12 +21,14 @@
             <th>Year of Joining</th>
             <th>Department</th>
             <th>Course</th>
+            <th></th>
         </tr>
     </thead>
-    <tbody>
+    @*<tbody>
         @foreach(var ins in Model)
         {
             <tr>
+                <td>@ins.User.Username</td>
                 <td>@ins.Name</td>
                 <td>@ins.FatherName</td>
                 <td>@ins.MotherName</td>
@@ -45,5 +48,9 @@
                 </td>
             </tr>
         }
-    </tbody>
+    </tbody>*@
 </table>
+@section Scripts{
+    <script src="~/js/Students.js"></script>
+}
+

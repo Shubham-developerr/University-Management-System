@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Course>
+﻿
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,13 +6,14 @@
 
 <h1>Index</h1>
 <a asp-action="Create" asp-controller="Course" asp-area="Admin" class="btn btn-primary">Create</a>
-<table class="table-bordered table-striped">
+<table id="tblData" class="table-bordered table-striped">
     <thead>
         <tr>
             <th>Course Name</th>
+            <th></th>
         </tr>
     </thead>
-    <tbody>
+    @*<tbody>
         @foreach(var obj in Model)
         {
             <tr>
@@ -25,6 +26,9 @@
                 </td>
             </tr>
         }
-    </tbody>
+    </tbody>*@
 </table>
+@section Scripts{
+    <script src="~/js/Course.js"></script>
+}
 

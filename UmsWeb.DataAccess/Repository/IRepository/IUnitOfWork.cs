@@ -15,6 +15,7 @@ namespace UmsWeb.DataAccess.Repository.IRepository
         public StudentRepository Students { get; }
         public SubjectRepository Subjects { get; }
         public TeacherRepository Teachers { get; }
+        public UserRepository Users { get; }
         void Save();
 
     }

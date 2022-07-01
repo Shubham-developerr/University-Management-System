@@ -78,6 +78,15 @@ namespace UmsWeb.Areas.Admin.Controllers
             return View(obj);
 
         }
+        [Area("Admin")]
+        #region API CALL
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var obj = unitOfWork.Teachers.GetAll(includeProperties:"Course,Department");
+            return Json(new {data=obj});
+        }
+        #endregion
     }
 }
 

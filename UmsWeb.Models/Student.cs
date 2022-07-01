@@ -19,6 +19,11 @@ namespace UmsWeb.Models
         public string MotherName { get; set; }
         [Required]
         public DateTime DOB { get; set; }
+        [Required]
+        public int  UserId{ get; set; }
+        [ForeignKey("UserId")]
+        [ValidateNever]
+        public Users User { get; set; }
 
         [Required]
         public string Address { get; set; }
@@ -38,6 +43,8 @@ namespace UmsWeb.Models
         [ForeignKey("DepartmentId")]
         [ValidateNever]
         public Department Department { get; set; }
+        [Required]
+       
         [Range(1,9,ErrorMessage ="Range 1-8")]
         public int? Semester { get; set; }
         /*public int? SubjectId { get; set; }

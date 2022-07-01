@@ -3,10 +3,11 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Create Instructor</h2>
 <form method="post">
     <input asp-for="Student.Id" hidden />
+    <input asp-for="Student.User.Username" value="@DateTime.Now.ToString("ddMMyyyyhhmmss")" hidden />
+    <input asp-for="Student.User.Password" value="@DateTime.Now.ToString("ddMMyyyyhhmmss")" hidden />
     <div class="border p-3 mt-4">
         <div class="row pt-2">
             <h2 class="text-primary">Add Faculty</h2>

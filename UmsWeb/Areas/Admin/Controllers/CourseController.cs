@@ -59,5 +59,14 @@ namespace UmsWeb.Areas.Admin.Controllers
             TempData["success"] = "Deleted Successfully";
             return RedirectToAction("Index");
         }
+        [Area("Admin")]
+        #region API CALL
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var obj = _unitOfWork.CourseRepository.GetAll();
+            return Json(new { data = obj });
+        }
+        #endregion
     }
 }
