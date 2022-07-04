@@ -28,6 +28,7 @@ namespace UmsWeb.DataAccess.Repository
             Fees = new FeesRepository(_unitOfWork);
             Students = new StudentRepository(_unitOfWork);
             Subjects = new SubjectRepository(_unitOfWork);
+            Teachers = new TeacherRepository(_unitOfWork);
             Users = new UserRepository(_unitOfWork);
             
         }

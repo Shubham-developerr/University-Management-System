@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using UmsWeb.DataAccess.Repository.IRepository;
 using UmsWeb.Models;
 
 namespace UmsWeb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class SubjectController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

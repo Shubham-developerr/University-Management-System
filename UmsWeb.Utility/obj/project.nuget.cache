@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "igxv+Lb0WlBS3DXoy07xoVJKn7UyDbD/ZZZbeWVtvlMqN7WAWsoN4pvrDsLwf7d1H9TOeRw7egwkT053Vr8FAg==",
+  "dgSpecHash": "H60caQ5+mONnKBNyH7+Nff54qkZqO7dRA5D9Yjmo1Ue+n7HOzkeW42tX+IsMi5G3qPugRQoXRkJ2yjE2xEmcjg==",
   "success": true,
   "projectFilePath": "E:\\C# Programs\\UmsWeb\\UmsWeb.Utility\\UmsWeb.Utility.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
+    "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
     "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\6.0.6\\microsoft.aspnetcore.authentication.negotiate.6.0.6.nupkg.sha512",
     "C:\\Users\\shubh\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

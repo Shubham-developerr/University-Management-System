@@ -16,7 +16,7 @@ namespace UmsWeb.DataAccess.Repository
             _db = db;
         }
 
-        public void Update(Models.Teacher teach)
+        public void Update(Teacher teach)
         {
             var obj = _db.Teachers.FirstOrDefault(x => x.Id == teach.Id);   
             if(obj!=null)

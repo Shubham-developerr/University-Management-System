@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using UmsWeb.DataAccess.Repository.IRepository;
 using UmsWeb.Models;
 
 namespace UmsWeb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class DepartmentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -11,6 +13,7 @@ namespace UmsWeb.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+        
         [Area("Admin")]
         public IActionResult Index()
         {
@@ -64,6 +67,7 @@ namespace UmsWeb.Areas.Admin.Controllers
             TempData["success"] = "Deleted Successfully";
             return RedirectToAction("Index");
         }
+        
         [Area("Admin")]
         #region API CALL
         [HttpGet]

@@ -4,9 +4,11 @@ using UmsWeb.Models;
 using UmsWeb.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UmsWeb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class StudentController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

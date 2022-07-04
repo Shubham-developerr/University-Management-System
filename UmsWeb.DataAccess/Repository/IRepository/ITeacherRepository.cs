@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UmsWeb.Models;
+using UmsWeb.Models.ViewModels;
 
 namespace UmsWeb.DataAccess.Repository.IRepository
 {

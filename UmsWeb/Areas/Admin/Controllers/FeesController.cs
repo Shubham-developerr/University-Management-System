@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using UmsWeb.DataAccess.Repository.IRepository;
 using UmsWeb.Models;
@@ -6,6 +7,7 @@ using UmsWeb.Models.ViewModels;
 
 namespace UmsWeb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class FeesController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -69,6 +71,7 @@ namespace UmsWeb.Areas.Admin.Controllers
             TempData["success"] = "Deleted Successfully";
             return RedirectToAction("Index");
         }
+        [Authorize] 
         [Area("Admin")]
         #region API CALL
         [HttpGet]

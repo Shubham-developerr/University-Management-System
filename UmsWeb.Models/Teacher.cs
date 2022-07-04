@@ -22,10 +22,12 @@ namespace UmsWeb.Models
         public DateTime DOJ { get; set; }
         [Required]
         public int CourseId {get; set;}
+        [ForeignKey("CourseId")]
         [ValidateNever]
         public Course Course { get; set; }
         [Required]
         public int DepartmentId { get; set; }
+        [ForeignKey("DepartmentId")]
         [ValidateNever]
         public Department Department { get; set; }
 

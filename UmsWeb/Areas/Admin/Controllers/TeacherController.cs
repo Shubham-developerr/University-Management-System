@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using UmsWeb.DataAccess;
 using UmsWeb.DataAccess.Repository.IRepository;
@@ -7,6 +8,7 @@ using UmsWeb.Models.ViewModels;
 
 namespace UmsWeb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class TeacherController : Controller
     {
         private readonly IUnitOfWork unitOfWork;
@@ -17,14 +19,14 @@ namespace UmsWeb.Areas.Admin.Controllers
         [Area("Admin")]
         public IActionResult Index()
         {
-            var obj = unitOfWork.Teachers.GetAll(includeProperties: "Course,Department");
+            var obj = unitOfWork.Teachers.GetAll(includeProperties:"Course,Department");
             return View(obj);
         }
         [Area("Admin")]
         public IActionResult Create()
         {
             TeacherVM teacherVM = new TeacherVM();
-            teacherVM.Instructor = new UmsWeb.Models.Teacher();
+            teacherVM.Instructor = new Teacher();
             teacherVM.CourseList = unitOfWork.CourseRepository.GetAll().Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() });
             teacherVM.DepartmentList = unitOfWork.Department.GetAll().Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() });
             return View(teacherVM);
